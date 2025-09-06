@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text,  StyleSheet,  View,  FlatList,  TouchableHighlight,  TouchableWithoutFeedback,  Keyboard,  Platform,} from 'react-native';
+import { Text,  StyleSheet,  View,  FlatList,  TouchableHighlight,  TouchableWithoutFeedback,  Keyboard,  Platform,Image} from 'react-native';
 import Cita from './src/components/Cita';
 import Formulario from './src/components/Formulario';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -51,7 +51,10 @@ const App = () => {
     <TouchableWithoutFeedback onPress={() => cerrarTeclado()}>
       <View style={styles.contenedor}>
         <Text style={styles.titulo}>Administrador de Reservas</Text>
+<View><Image 
 
+source={require('./src/img/parrillada.png')}
+/></View>
         <View>
           <TouchableHighlight
             onPress={() => mostrarFormulario()}
