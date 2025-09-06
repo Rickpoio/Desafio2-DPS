@@ -8,16 +8,24 @@ const Cita = ({ item, eliminarPaciente }) => {
     return (
         <View style={styles.cita}>
             <View>
-                <Text style={styles.label}>Paciente: </Text>
+                <Text style={styles.label}>CLiente: </Text>
                 <Text style={styles.texto}>{item.paciente}</Text>
             </View>
             <View>
-                <Text style={styles.label}>Propietario: </Text>
-                <Text style={styles.texto}>{item.propietario}</Text>
+                <Text style={styles.label}>Zona seleccionada: </Text>
+                <Text style={styles.texto}>{item.zonaSeleccionada}</Text>
             </View>
-            <View>
-                <Text style={styles.label}>Síntomas: </Text>
-                <Text style={styles.texto}>{item.sintomas}</Text>
+              <View>
+                <Text style={styles.label}>Cantidad de personas: </Text>
+                <Text style={styles.texto}>{item.personas}</Text>
+            </View>
+           <View>
+                <Text style={styles.label}>Fecha: </Text>
+                <Text style={styles.texto}>{item.fecha}</Text>
+            </View>
+              <View>
+                <Text style={styles.label}>Hora: </Text>
+                <Text style={styles.texto}>{item.hora}</Text>
             </View>
             <View>
                 <TouchableHighlight onPress={() => dialogoEliminar(item.id)} style={styles.btnEliminar}>

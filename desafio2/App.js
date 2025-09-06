@@ -78,8 +78,8 @@ const App = () => {
               <Text style={styles.titulo}>
                 {' '}
                 {citas.length > 0
-                  ? 'Administra tus citas'
-                  : 'No hay citas, agrega una'}{' '}
+                  ? 'Administrar reservas'
+                  : 'No hay reservas, agrega una'}{' '}
               </Text>
               <FlatList
                 style={styles.listado}

@@ -21,11 +21,13 @@ const Formulario = ({
 }) => {
   //variables para el formulario
   const [paciente, guardarPaciente] = useState("");
+    const [personas, guardarPersonas] = useState("");
   const [zonaSeleccionada, guardarZonaSeleccionada] = useState("");
   const [telefono, guardarTelefono] = useState("");
   const [fecha, guardarFecha] = useState("");
   const [hora, guardarHora] = useState("");
-  const [sintomas, guardarSintomas] = useState("");
+  
+
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [isTimePickerVisible, setTimePickerVisibility] = useState(false);
 
@@ -55,11 +57,11 @@ const Formulario = ({
     // Validar
     if (
       paciente.trim() === "" ||
+       personas.trim() === "" ||
       zonaSeleccionada.trim() === "" ||
       telefono.trim() === "" ||
       fecha.trim() === "" ||
-      hora.trim() === "" ||
-      sintomas.trim() === ""
+      hora.trim() === "" 
     ) {
       // Falla la validación
       mostrarAlerta();
@@ -68,11 +70,12 @@ const Formulario = ({
     // Crear una nueva cita
     const cita = {
       paciente,
+      personas,
       zonaSeleccionada,
       telefono,
       fecha,
       hora,
-      sintomas,
+
     };
     cita.id = shortid();
     // console.log(cita);
@@ -84,9 +87,10 @@ const Formulario = ({
     // Ocultar el formulario
     guardarMostrarForm(false);
     // Resetear el formulario
-    guardarSintomas("");
+
     guardarZonaSeleccionada("");
     guardarPaciente("");
+    guardarPersonas("");
     guardarHora("");
     guardarFecha("");
     guardarTelefono("");
@@ -111,6 +115,13 @@ const Formulario = ({
           <TextInput
             style={styles.input}
             onChangeText={(texto) => guardarPaciente(texto)}
+          />
+        </View>
+        <View>
+          <Text style={styles.label}>Cantidad de personas:</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(texto) => guardarPersonas(texto)}
           />
         </View>
         <View style={styles.container}>
@@ -174,14 +185,7 @@ const Formulario = ({
           />
           <Text>{hora}</Text>
         </View>
-        <View>
-          <Text style={styles.label}>Síntomas:</Text>
-          <TextInput
-            multiline
-            style={styles.input}
-            onChangeText={(texto) => guardarSintomas(texto)}
-          />
-        </View>
+      
         <View>
           <TouchableHighlight
             onPress={() => crearNuevaCita()}
