@@ -191,7 +191,7 @@ const Formulario = ({
             onPress={() => crearNuevaCita()}
             style={styles.btnSubmit}
           >
-            <Text style={styles.textoSubmit}>Crear Nueva Cita</Text>
+            <Text style={styles.textoSubmit}>Crear Nueva Reserva</Text>
           </TouchableHighlight>
         </View>
       </ScrollView>

@@ -50,7 +50,7 @@ const App = () => {
   return (
     <TouchableWithoutFeedback onPress={() => cerrarTeclado()}>
       <View style={styles.contenedor}>
-        <Text style={styles.titulo}>Administrador de Citas</Text>
+        <Text style={styles.titulo}>Administrador de Reservas</Text>
 
         <View>
           <TouchableHighlight
@@ -58,14 +58,14 @@ const App = () => {
             style={styles.btnMostrarForm}>
             <Text style={styles.textoMostrarForm}>
               {' '}
-              {mostrarform ? 'Cancelar Crear Cita' : 'Crear Nueva Cita'}{' '}
+              {mostrarform ? 'Cancelar Reserva' : 'Crear Reserva'}{' '}
             </Text>
           </TouchableHighlight>
         </View>
         <View style={styles.contenido}>
           {mostrarform ? (
             <>
-              <Text style={styles.titulo}>Crear Nueva Cita</Text>
+              <Text style={styles.titulo}>Crear Reserva</Text>
               <Formulario
                 citas={citas}
                 setCitas={setCitas}
