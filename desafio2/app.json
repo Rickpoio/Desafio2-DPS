@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "desafio2",
-    "slug": "desafio2",
+    "name": "citas",
+    "slug": "citas",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
