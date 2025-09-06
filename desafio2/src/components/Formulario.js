@@ -172,7 +172,7 @@ const Formulario = ({
         </View>
         <View>
           <Text style={styles.label}>Hora:</Text>
-          <Button title="Seleccionar Hora" onPress={showTimePicker} />
+          <Button style={styles.sel} title="Seleccionar Hora" onPress={showTimePicker} />
           <DateTimePickerModal
             isVisible={isTimePickerVisible}
             mode="time"
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   },
   btnSubmit: {
     padding: 10,
-    backgroundColor: colors.BUTTON_COLOR,
+    backgroundColor:'#cf7272ff',
     marginVertical: 10,
   },
   textoSubmit: {
@@ -249,5 +249,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#333",
   },
+ 
 });
 export default Formulario;

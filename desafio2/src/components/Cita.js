@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     btnEliminar: {
         padding: 10,
-        backgroundColor: 'red',
+        backgroundColor: '#cf7272ff',
         marginVertical: 10
     },
     textoEliminar: {
